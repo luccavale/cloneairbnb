@@ -9,12 +9,28 @@
 header {
     padding: 14px;
     border-bottom: 1px solid #ccc;
+
+    @media (max-width: 480px) {
+        display: none;
+    }
 }
 
 .container {
     max-width: 1120px;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: 480px) {
+        max-width: 80%;
+    }
+
+}
+
+main .container:first-child {
+
+    @media (max-width: 480px) {
+        max-width: 100vw;
+    }
 }
 
 .navbar {
@@ -135,6 +151,11 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 24px 0;
+
+    @media (max-width: 480px) {
+        margin-left: 40px;
+        display: block;
+    }
 }
 
 .container-house h1{
@@ -171,7 +192,7 @@ header {
     display: flex;
     align-items: center;
     gap: 8px;
-    position: relative;
+    position: relative; 
 }
 
 .images-house > img{
@@ -180,12 +201,22 @@ header {
     object-fit: cover;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+
+    @media (max-width: 480px) {
+        width: 100vw;
+        height: 266px;
+        border-radius: 0px;
+    } 
 }
 
 .grid-images-house {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
+
+    @media (max-width: 480px) {
+        display: none;
+    }
 }
 
 .grid-images-house img{
@@ -213,6 +244,10 @@ header {
     position: absolute;
     bottom: 15px;
     right: 25px;
+
+    @media (max-width: 480px) {
+        display: none;
+    }
 }
 
 .menu-dot img{
@@ -232,10 +267,22 @@ header {
 }
 
 .pref {
+    width: 100%;
+    height: 110px;
+    background-image: url('./imgs/pref.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
     border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 15px;
+
     margin-bottom: 12px;
+
+    @media (max-width: 480px){
+        background-image: url('./imgs/pref-celular.png');
+        height: 81px;
+        padding: 20px 0;
+    }
 }
 
 .anfitriao-container {
@@ -332,6 +379,31 @@ header {
     border-bottom: 1px solid #ccc;
 }
 
+.oferece {
+    height: 280px;
+    background-image: url('./imgs/infos.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 480px) {
+        width: 100%;
+        height: 292px;
+        background-image: url('./imgs/oferece-celular.png');
+    }
+}
+
+.check-info {
+    height: 224px;
+    background-image: url('./imgs/check-info.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: 480px) {
+        height: 260px;
+        background-image: url('./imgs/check-info-celular.png');
+    }
+}
+
 .oferece-container h2 {
     margin-bottom: 24px;
     font-size: 22px;
@@ -353,11 +425,27 @@ header {
     padding: 48px 0;
 }
 
+.calendar-img {
+    width: 100%;
+    height: 437px;
+    background-image: url('./imgs/calendar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 480px) {
+        background-image: url('./imgs/calendar-celular.png');
+    }
+}
+
 .main-section {
     display: grid;
     grid-template-columns: 1fr auto;
     border-bottom: 1px solid #ccc;
     margin-bottom: 48px;
+
+    @media (max-width: 480px) {
+        display: block;
+    }
 }
 
 .reservar {
@@ -470,9 +558,30 @@ header {
     font-size: 14px;
 }
 
+.img-feedback {
+    width: 1120px;
+    height: 514px;
+    background-image: url('./imgs/section-pref.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 480px) {
+        width: 100%;
+        height: 514px;
+        background-image: url('./imgs/celular-img.png');
+    }
+}
+
 .feedback {
     padding-top: 20px;
     border-bottom: 1px solid #ccc;
+}
+
+.feedback img {
+
+    @media (max-width: 480px) {
+        display: none;
+    }
 }
 
 .feedback button{
@@ -490,6 +599,28 @@ header {
 .local {
     padding: 48px 0;
     border-bottom: 1px solid #ccc;
+}
+
+.local .mapa {
+    width: 1119px;
+    height: 478px;
+    background-image: url('./imgs/mapa.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 480px) {
+        width: 100%;
+        height: 218px;
+        background-image: url('./imgs/mapa-celular.png');
+    }
+
+}
+
+.local div > img {
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 }
 
 .local h2{
@@ -512,10 +643,6 @@ header {
 
 .receber {
     padding: 40px 0;
-}
-
-.receber > div {
-    display: flex;
 }
 
 .receber-1 {
@@ -552,6 +679,10 @@ header {
     gap: 64px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 48px;
+
+    @media (max-width: 480px) {
+        display: block;
+    }
 }
 
 .superhost h3 {
@@ -610,6 +741,10 @@ header {
 .container-infos {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 480px) {
+        display: block;
+    }
 }
 
 .section-infos h2 {
@@ -627,6 +762,10 @@ header {
 .informacoes {
     flex: 1;
     max-width: 300px; 
+
+    @media (max-width: 480px) {
+        margin-bottom: 20px;
+    }
 }
 
 .informacoes h3 {
@@ -660,6 +799,10 @@ header {
     justify-content: space-between;
     padding-bottom: 20px;
     gap:100px;
+
+    @media (max-width: 480px) {
+        display: block;
+    }
 }
 
 .footer-column {
@@ -698,6 +841,10 @@ header {
     align-items: center;
     border-top: 1px solid #ddd;
     padding-top: 10px;
+
+    @media (max-width: 480px) {
+        display: block;
+    }
 }
 
 .footer-links {
